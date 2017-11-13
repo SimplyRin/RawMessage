@@ -24,7 +24,7 @@ public class RawMessage extends JavaPlugin implements Listener {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(!sender.hasPermission("rawmessage.send")) {
 			sender.sendMessage(getPrefix() + "§cYou do not have access to this command");
-			// sender.sendMessage(getPrefix() + "§cPlease contact to SimplyRin!");
+			sender.sendMessage(getPrefix() + "§cPlease contact to SimplyRin!");
 			return true;
 		}
 
@@ -34,15 +34,16 @@ public class RawMessage extends JavaPlugin implements Listener {
 			if(player != null) {
 				if(args.length > 1) {
 					String message = "";
-			        	for (int i = 1; i < args.length; i++) {
-			        		message = message + args[i] + " ";
-			        	}
-			        	message = ChatColor.translateAlternateColorCodes('&', message);
+					for (int i = 1; i < args.length; i++) {
+						message = message + args[i] + " ";
+					}
+					message = ChatColor.translateAlternateColorCodes('&', message);
 
-			        	player.sendMessage(message);
+					player.sendMessage(message);
 				}
 				return true;
 			}
+
 			sender.sendMessage(getPrefix() + "§cThat player is not online!");
 			return true;
 		}
