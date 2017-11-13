@@ -1,7 +1,0 @@
-main: net.simplyrin.rawmessage.RawMessage
-name: RawMessage
-version: 1.0.0
-author: SimplyRin
-commands:
-  rawmsg:
-  rawmessage:
